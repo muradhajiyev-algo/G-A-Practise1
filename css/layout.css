@@ -9,12 +9,22 @@ body {
 
 header {
   grid-area: HEADER;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 nav.verticalNav {
   grid-area: VERTICALNAV;
+  position: fixed;
+  bottom: 0;
+  top: 43px;
+  left: 0;
+  width: 250px;
 }
 main {
   grid-area: MAIN;
+  margin-top: 43px;
 }
 footer {
   grid-area: FOOTER;
@@ -24,12 +34,15 @@ footer {
   body {
     grid-template-areas:
       'HEADER'
+      'VERTICALNAV'
       'MAIN'
       'FOOTER';
     grid-template-columns: 100%;
   }
   nav.verticalNav {
-    display: none;
+    position: static;
+    margin-top: 42px;
+    width: auto;
   }
 }
 
